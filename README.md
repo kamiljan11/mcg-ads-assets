@@ -10,7 +10,7 @@ URL, and GitHub's raw endpoint is a stable, free one that does not expire.
 
 | File pattern | What it is |
 |---|---|
-| `MCG_zostaw-auto_*` | "Leave your car" campaign — Polish version: editable `.pptx` sources and exported `1080x1350` creatives, including the variant with an OpenStreetMap location map |
+| `MCG_zostaw-auto_*` | "Leave your car" campaign — Polish version: editable `.pptx` sources (`_EDYTOWALNY`, `_MAPA-OSM_EDYTOWALNY`) and exported `1080x1350` creatives (`_mapa_`, `_MAPA-OSM_`), the latter with an OpenStreetMap location map |
 | `MCG_leave-your-car_EN*` | The same campaign in English |
 | `MCG_skodun-3-kreacje_EDYTOWALNY.pptx` | Skoðun (Icelandic vehicle inspection) — three creatives in one editable deck |
 | `MCG_gosia_avatar.jpg` | Portrait used in the creatives, published with the consent of the person shown |
@@ -26,6 +26,14 @@ https://raw.githubusercontent.com/kamiljan11/mcg-ads-assets/main/<file>
 
 Paste that URL into Canva ("Import from URL") or reference it when creating the ad. Renaming or
 deleting a file breaks every design that already points at it — add a new file instead.
+
+## Stack, running, tests, deploy
+
+None of these apply: the repository holds binary files only (`.pptx`, `.png`, `.jpg`) — no build,
+no dependencies, no tests, no CI workflows. "Deploy" is a push to `main`: the file is served from
+the raw URL above straight away. Operational notes (where the assets come from, how to edit and
+export them, licence, open questions): [`docs/RUNBOOK.md`](docs/RUNBOOK.md). History:
+[`CHANGELOG.md`](CHANGELOG.md).
 
 ## Rules for this repository
 
